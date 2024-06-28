@@ -3,7 +3,7 @@ services:
   db:
     image: postgres:11
     user: root
-    container_name: nust_odoo_13_db
+    container_name: odoo_13_db
     environment:
       - POSTGRES_PASSWORD=odoo
       - POSTGRES_USER=odoo
@@ -15,7 +15,7 @@ services:
   odoo13:
     image: odoo:13
     user: root
-    container_name: nust_odoo_13_server
+    container_name: odoo_13_server
     depends_on:
       - db
     ports:
